@@ -12,7 +12,7 @@
             background-color: skyblue;
         } */
         #num{
-            font-size: 300px; height: 400px; width: 400px; 
+            font-size: 100px; height: 400px; width: 400px; 
             line-height: 400px; text-align: center; color: white;
             border: 3px solid white; margin: auto; 
         }
@@ -26,33 +26,36 @@
     <script>
         let select = parseInt(prompt("1~7사이의 숫자를 입력하셈 >>> "));
         let color;
+        let colors = ["red", "orange", "yellow","green", "blue", "navy", "violet"]
 
         switch (select) {
             case 1:
-                color = "red";
+                color = colors[0];
                 break;
             case 2:
-                color = "orange";
+                color = colors[1];
                 break;
             case 3:
-                color = "yellow";
+                color = colors[2];
                 break;
             case 4:
-                color = "green";
+                color = colors[3];
                 break;
             case 5:
-                color = "blue";
+                color = colors[4];
                 break;
             case 6:
-                color = "navy";
+                color = colors[5];
                 break;
             case 7:
-                color = "violet";
+                color = colors[6];
                 break;
+            default:
+                color = "black"; 
         }
 
         document.body.style.backgroundColor = color;
-        document.getElementById("num").innerHTML = select;
+        document.getElementById("num").innerHTML = colors[select-1];
     </script>
 </body>
 
