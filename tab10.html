@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>html5 standard table</h2>
+
+    <table border="1" width="100%" summary="월별 직원 성과에 따른 급여">
+        <caption>직원 성과에 따른 급여</caption>
+        <colgroup>
+            <col width="20%">
+            <col width="30%">
+            <col width="30%">
+            <col width="20%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">직원명</th>
+                <th scope="colgroup">구분</th>
+                <th scope="colgroup2">판매액</th>
+            </tr>
+            <tr>
+                <th scope="col"></th>
+                <th scope="colgroup">50%</th>
+                <th scope="colgroup2">100%</th>
+            </tr>
+        </thead>
+        <tfoot>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th scope="row">1월</th>
+                <td>80,000</td>
+                <td>250,000</td>
+                <td>500,000</td>
+            </tr>
+            <tr>
+                <th scope="row">2월</th>
+                <td>50,000</td>
+                <td>120,000</td>
+                <td>210,000</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

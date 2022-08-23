@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <h1>홀짝 판정하기</h1>
+
+    <div>숫자 1: <input type="text" id="n1"></div>
+    <div>숫자 2: <input type="text" id="n2"></div>
+    <hr>
+    <button type="button" onclick="check()">홀짝 판정</button>
+    <hr>
+    <div>숫자 1과 2의 합은 <mark><span id="result">결과</span></mark>입니다.</div>
+
+    <script>
+        function check()
+        {
+            let a = document.getElementById("n1").value;
+            let b = document.getElementById("n2").value;
+            let result = parseInt(a) + parseInt(b);
+            console.log(result);
+
+            if (result % 2 == 0)
+                document.getElementById("result").innerHTML = "짝수";
+            else
+                document.getElementById("result").innerHTML = "홀수";
+        }
+    </script>
+</body>
+</html>

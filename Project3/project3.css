@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+.logo{
+    text-align: center;
+    margin: auto;
+}
+
+h1, h2, h3, h4{
+    margin: 1em;
+    text-align: center;
+    overflow: auto;
+}
+
+h1{
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+}
+
+h2{
+    color: black;
+}
+
+h3{
+
+}
+
+h4{
+    color: grey;
+}
+
+a{
+    color: palevioletred;
+}
+
+.set1{
+    background: linear-gradient(to right, #D1B6E1, #519D9E, #58C9B9, #9DC8C8);
+}
+
+.set2{
+    background: linear-gradient(to right, #000000, #CE6D39, #F17F42, #FFEEE4);
+}
+
+.set3{
+    background: linear-gradient(to right, #090707, #E53A40, #EFDC05, #30A9DE);
+}
+
+.set4{
+    background: linear-gradient(to right, #566270, #FFFFF3, #E0E3DA, #A593E0);
+}
+
+.set5{
+    background: linear-gradient(to right, #1F2124, #383A3F, #F68657, #F6B352);
+}
+
+.set6{
+    background: linear-gradient(to right, #011638, #2E294E, #9055A2, #D499B9);
+}

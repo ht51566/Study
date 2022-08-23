@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <h1>variable(변수)</h1>
+
+    <script>
+        //변수: 값을 저장하기 위한 그릇(메모리 공간) 
+        //선언하고 값을 저장(초기화)하여 사용
+        var x; //변수 선언
+        //alert(x); //undefined - 초기화하지 않은 변수는 사용 불가
+        x = 3; //선언한 변수를 3으로 초기화 - x에 3을 넣었다
+        //alert(x);
+
+        //자바스크립트 변수는 저장된 값에 의해 타입이 결정된다.
+        
+        // 변수 a에 7을 넣어라
+        var a = 7; //정수형 변수 a를 선언하고 7로 초기화
+        alert(a);
+        a = "wow";
+        alert(a);
+        var b = "안냐세요?"; //변수 선언하고 문자열을 입력하여 초기화 
+        var c = 3.14; //실수형 변수
+        var d = Date(); //변수 d를 Date함수의 결과값으로 초기화
+
+        console.log("정수: " + a);
+        console.log("typeof(a): " + typeof(a));
+        console.log("문자열: " + b);
+        console.log("typeof(b): " + typeof(b));
+        console.log("실수: " + c);
+        console.log("typeof(c): " + typeof(c));
+        console.log("Date 함수 결과값: " + d);
+        console.log("typeof(d): " + typeof(d));
+
+        var e = true;
+        console.log("boolean: " + e);
+        console.log("typeof(e): " + typeof(e));
+
+        var nameOfMyGirlFriend = "mary";
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <h1>계산기</h1>
+    <form action="">
+        <input type="text" name="num1" id="num1" >
+        <select name="operator" id="operator">
+            <option value="plus">+</option>
+            <option value="minus">-</option>
+            <option value="multi">*</option>
+            <option value="divide">/</option>
+        </select>
+        <input type="text" name="num2" id="num2">
+        <button type="button" onclick="calcul()">=</button>
+        <input type="text" name="result" id="result">
+
+    </form>
+
+    <script>
+        // 1.num1의 값 받아오기
+        // 2.num2의 값 받아오기
+        // 3.두 숫자의 값 연산하여 result에 출력
+        function calcul(){
+            var num1 = document.getElementById("num1").value;
+            console.log("num1  >>> ", num1);
+            var num2 = document.getElementById("num2").value;
+            console.log("num2  >>> ", num2);
+            var operator = document.getElementById("operator").value;
+
+            if(operator == "plus"){
+                var result = parseInt(num1) + parseInt(num2);
+            }else if(operator == "minus"){
+                var result = parseInt(num1) - parseInt(num2);
+            }
+            else if(operator == "multi"){
+                var result = parseInt(num1) * parseInt(num2);
+            }
+            else if(operator == "divide"){
+                var result = parseInt(num1) / parseInt(num2);
+            }
+            
+            console.log("result  >>> ", result);
+            document.getElementById("result").value = result;
+        }
+    </script>
+     
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <h1>prompt 함수</h1>
+    <p>사용자로부터 값을 입력받기 위한 함수 - 받은 값을 문자열로 반환</p>
+    <div>내 이름은 <span id="name">name</span>입니다.</div>
+    <script>
+        var name = prompt("당신의 이름은?", "tom");
+        console.log("name >>> ", name);
+        document.getElementById("name").innerHTML = name;
+
+        var x = prompt("첫 번째 수 입력하셈>>> ", 9);
+        console.log(typeof(x)); //string - 문자열 int - 정수
+        var y = prompt("두 번째 수 입력하셈>>> ", 3);
+        console.log(x + y); //string + string = string
+        console.log(typeof(parseInt(x))); 
+        //console.log(parseInt("a"));
+        //parseInt("7") -> 7  // parseInt("a") -> NaN(Not a Number)
+        console.log(parseInt(x) + parseInt(y));
+        
+        // plus(x, y);
+
+        // function plus(a, b){
+        //     console.log(parseInt(a) + parseInt(b));
+        // }
+
+
+    </script>
+
+
+</body>
+</html>

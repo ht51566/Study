@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <h1>if - 조건에 따라 실행 방향 결정</h1>
+
+    <div>나이 입력: <input type="text" id="age"></div>
+    <button type="button" onclick="check()">나이 체크</button>
+    <h2>당신은 <span id="span_age">몇</span>세이므로 <span id="drink">무언가</span>를 마시셈 ㅋㅋㅋ</h2>
+
+    <script>
+        function check()
+        {
+            let age = document.getElementById("age").value;
+
+            document.getElementById("span_age").innerHTML = age;
+
+            if (age >= 18)
+                document.getElementById("drink").innerHTML = "소주";
+            else if (age >= 15)
+                document.getElementById("drink").innerHTML = "커피";
+            else
+                document.getElementById("drink").innerHTML = "우유";
+        }
+    </script>
+</body>
+</html>

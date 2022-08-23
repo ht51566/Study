@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        tr{
+            text-align: center;
+        }
+        div, caption{
+            text-align: center;
+            margin: 1em;
+        }      
+    </style>
+</head>
+<body>
+    <form action="" get="method">
+    <table border="1" width="100%">
+        <caption>회원가입</caption>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>직업</th>
+                <th>이메일</th>
+                <th>생일</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" name="name" required></td>
+                <td><input type="number" name="age" required></td>
+                <td><input type="radio" name="job" value="student" required> 학생
+                <input type="radio" name="job" value="teacher" required> 강사
+                </td>
+                <td><input type="email" name="email" required></td>
+                <td><input type="date" name="birthday"required></td>
+            </tr>
+        </tbody>
+    </table>
+    <fieldset>
+        <legend>알림 및 광고 수신 여부</legend>
+        <input type="checkbox" name="spec" value="announcement"> 알림 수신 동의<br>
+        <input type="checkbox" name="spec" value="advertisement"> 광고 수신 동의<br>
+    </fieldset>
+    <div><button type="submit">가입하기</button></div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+h1{
+    background-color: teal;
+    padding: 20px;
+    color: white
+}
+
+p{
+    background-color: brown;
+    padding: 10px;
+    color: white;
+}
+
+div.sky{ width: 500px; height: 100px; background-color: skyblue; border: 1px solid #333; overflow: auto; margin: 10px;}
+
+ul.tomato li{
+    background-color: tomato;
+    padding: 10px;
+    color: white;
+    margin: 5px;
+}
