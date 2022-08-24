@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sum = 0;
+
+        // 1번 문제
+        document.write("1 부터 10 까지의 수: ");
+
+        for (let i = 1; i <= 10; i++)
+            document.write(i + " ");
+        
+        // 한줄 띄우기
+        document.write("<br><br>");
+
+        // 2번 문제
+        document.write("1 부터 10 까지의 수 중 홀수만: ");
+
+        for (let j = 1; j <= 10; j++)
+        {
+            if (j % 2 != 0)
+                document.write(j + " ");
+        }
+
+        // 한줄 띄우기
+        document.write("<br><br>");
+
+        // 3번 문제
+        for (let k = 1; k <= 10; k++)
+        {
+            sum += k;
+            document.write("1 부터 " + k + " 까지의 합계: " + sum + "<br>");
+        }
+
+        // 한줄 띄우기
+        document.write("<br>");
+
+        // 4번 문제
+        document.write("1 부터 100 까지의 수 중 3 의 배수를 큰 수 부터: ");
+
+        for (let l = 100; l >= 1; l--)
+        {
+            if (l % 3 == 0)
+                document.write(l + " ");
+        }
+
+        // 한줄 띄우기
+        document.write("<br><br>");
+
+        // 5번 문제
+        sum = 0;
+
+        for (let m = 1; m < 20; m++)
+        {
+            if (m % 2 == 0 || m % 3 == 0)
+            {
+                sum += m;
+            }
+
+            document.write("1 부터 " + m + " 까지의 수 중 2 또는 3 의 배수인 수의 합: " + sum + "<br>");
+        }
+
+        // 한줄 띄우기
+        document.write("<br>");
+
+        // 6번 문제
+        for (let n = 1; n <= 5; n++)
+        {
+            for (let i = 1; i <= n; i++)
+                document.write("*");
+            
+            document.write("<br>");
+        }
+
+        // 한줄 띄우기
+        document.write("<br>");
+
+        // 7번 문제
+        for (let o = 5; o >= 1; o--)
+        {
+            for (let i = 1; i <= o; i++)
+                document.write("*");
+            
+            document.write("<br>");
+        }
+
+        // 한줄 띄우기
+        document.write("<br>");
+
+        // 8번 문제
+        for (let i = 1; i <= 6; i++)
+        {
+            for (let j = 1; j <= 6; j++)
+            {
+                if (i + j == 6)
+                    document.write("[ " + i + ", " + j + " ]<br>");
+            }               
+        }
+    </script>
+</body>
+</html>

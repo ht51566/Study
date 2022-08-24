@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <h1>Game</h1>
+
+    <p>비밀번호: <input type="text" id="pw"><span id="info"></span></p>
+    <button type="button" onclick="start()">게임 시작</button>
+    <p>결과: <input type="text" id="result"></p>
+    <hr>
+
+    <script>
+        function start(){
+            let pw = document.getElementById("pw").value;
+            let info = document.getElementById("info");
+            let result = document.getElementById("result");
+
+            if(pw != "1234"){
+                //continue;
+                info.innerHTML ="비번 틀림 ㅋㅋㅋ";
+                return;
+            };
+            info.innerHTML = "";
+            for(let i = 0; i < 10; i++){
+                let ran = parseInt(Math.random()*10);
+                sleep(500).then(()=> result.value = i + " : " + ran); 
+        
+                if(i == ran){
+                    console.log(i);
+                    console.log("축하!!!")
+                    result.value = "성공 >>> " + i; 
+                    break;
+                }else{
+                    result.value = "실패 >>> "; 
+                }
+
+            }
+            
+        }
+        function sleep(ms) {
+            return new Promise((r) => setTimeout(r, ms));
+        }
+        // let password;
+        // let run = true;
+        // while(run){
+        //     password = prompt("pw 입력하셈 >>> ");
+        //     if(password != "1234"){
+        //         continue;
+        //     };
+
+        //     console.log("게임 시작!");
+
+        //     for(let i = 0; i < 10; i++){
+        //         if(i == parseInt(Math.random()*10)){
+        //             console.log(i);
+        //             console.log("축하!!!")
+        //             run = false;
+        //             break;
+        //         }
+        //     }
+            
+        //     console.log("처음으로!");
+        // }
+        // console.log("게임 끝!");
+    </script>
+</body>
+</html>

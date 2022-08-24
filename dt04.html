@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>for in, for of</h1>
+
+    <script>
+        let a = ["kim", "lee", "park"];
+        //index를 이용하는 for문
+        for(let i = 0; i < a.length; i++){
+            document.write("<p>"+a[i]+"</p>");
+        }
+        document.write("<hr>");
+        //array의 요소를 순서대로 뽑아내는 for in - index가 나옴
+        for(let x in a){
+            document.write("<p>"+ x + " : " +a[x]+"</p>");
+        }
+        document.write("<hr>");
+        //array의 요소를 순서대로 뽑아내는 for of - 바로 값이 나옴 
+        //iterable: array, string, map, nodelists etc에만 사용 가능
+        for(let x of a){
+            document.write("<p>"+ x + "</p>");
+        }
+
+        //json
+        let b = {fname: "Cruze", lname:"Tom", age: 60};
+        document.write(b.lname);
+        for(let x in b){
+            document.write("<p>"+ x + " : " +b[x]+"</p>");
+        }
+        document.write("<hr>");
+        let c = {"name": "이순신", "age":37, "hobby": "golf"};
+        document.write(c.name);
+        document.write("<hr>");
+        document.write(c.age);
+        document.write("<hr>");
+        document.write(c.hobby);
+        document.write("<hr>");
+    </script>
+</body>
+</html>
