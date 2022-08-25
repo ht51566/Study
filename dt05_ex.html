@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = new Array(5);
+
+        /*
+        a[0] = 1;
+        a[1] = 2;
+        a[2] = 3;
+        a[3] = 4;
+        a[4] = 5;
+        */
+
+        for (let i = 0; i < a.length; i++)
+        {
+            a[i] = i + 1;
+
+            console.log("a[" + i + "] = " + (i + 1));
+        }
+
+        let sum = 0;
+
+        for (let i in a)
+            sum += a[i];
+
+        console.log("합계: " + sum);
+        console.log("길이: " + sum/a.length);
+
+        // 6번 문제
+        let lee = {"name" : "이순신", "age" : 37, "hobby" : "golf"};
+
+        console.log(lee.name);
+        console.log(lee.age);
+        console.log(lee.hobby);
+
+        // 7번 문제
+        for (let i in lee)
+            console.log(i + " : " + lee[i]);
+    </script>
+</body>
+</html>

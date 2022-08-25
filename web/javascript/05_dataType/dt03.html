@@ -13,6 +13,7 @@
     <div class="sky">["red", true, "blue", "yellow", 7, null]</div>
 
     <script>
+     
         let a = new Array(3); //3칸짜리 어레이 생성
         a[0] = 12;
         a[1] = 24;
@@ -23,9 +24,13 @@
         document.write(a[1]);
         document.write("<hr>");
         a[3] = 55;
+        document.write(a);
+        document.write("<hr>");
         document.write(a[3]);
         document.write("<hr>");
-
+        a[0] = "wow";
+        document.write(a);
+        document.write("<hr>");
         let b = ["yesterday", "today", "tomorrow"];
         document.write(b);
         document.write("<hr>");
@@ -47,7 +52,8 @@
         document.write("a.length: " + a.length);
         document.write("<hr>");
 
-        for(let i = 0; i < b.length; i++){
+        let len = b.length;
+        for(let i = 0; i < len; i++){
             document.write(b[i]);
             document.write("<hr>");
         }
@@ -68,9 +74,6 @@
         document.write("<hr>");
         document.write(d[1]); //문자열도 array임. 각 글자가 하나의 원소. 문자열의 두 번째 글자 출력
         document.write("<hr>");
-
-
-
 
     </script>
 </body>

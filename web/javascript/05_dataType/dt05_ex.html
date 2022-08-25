@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1. 빈 array 5칸짜리 생성 a
+        let a = new Array(5);
+        //2. a의 각 인덱스에 1,2,3,4,5를 값을 입력
+        // a[0] = 1;
+        // a[1] = 2;
+        // a[2] = 3; 
+        // a[3] = 4; 
+        // a[4] = 5;
+
+        //let a = [1, 2, 3, 4, 5];
+
+        //3. for 문 사용해서 2번 문제 해결하기
+        let len = a.length;
+        for (let i = 0; i < len; i++) {
+            a[i] = i + 1;
+        }
+        console.log(a);
+
+        //4. array a의 각 값을 콘솔에 출력
+        for (let i = 0; i < a.length; i++) {
+            console.log(a[i]);
+        }
+        console.log("----------------------");
+        for (let x in a) {
+            console.log(a[x]);
+        }
+        console.log("----------------------");
+        //5. array a의 각 값의 합계를 출력
+        let sum = 0;
+        // for(let x in a){
+        //     sum += a[x]
+        // }
+        for (let i = 0; i < a.length; i++) {
+            sum += a[i];
+        }
+        console.log("합계: " + sum);
+        console.log("평균: " + sum / a.length);
+        console.log("----------------------");
+
+        //6. for문 쓰지 말고 키를 이용해서 값을 하나씩 출력
+        let lee = { "name": "이순신", "age": 37, "hobby": "golf" };
+        console.log(lee.name);
+        console.log(lee.age);
+        console.log(lee.hobby);
+        console.log("----------------------");
+        //7. for in 사용해서 키 : 값 형태로 출력
+        for(let x in lee){
+            console.log(x + " : " + lee[x]);
+        }
+        console.log("----------------------");
+    </script>
+</body>
+
+</html>
