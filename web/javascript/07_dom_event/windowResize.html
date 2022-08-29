@@ -56,8 +56,8 @@
         scroller.addEventListener("scroll", (event) => {
             output.textContent = `scrollTop: ${scroller.scrollTop}`;
         });
-        document.addEventListener("scroll", function(){
-            document.getElementById("scroll").innerHTML = document.body.scrollTop;
+        window.addEventListener("scroll", function(){
+            document.getElementById("scroll").innerHTML = window.scrollTop;
         });
     </script>
 </body>
