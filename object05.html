@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //class 이름: Car    
+        //속성: brand, color, price, model 
+        //생성자 만들고 자동차 4대 생성하여 myCars 배열에 넣을 것
+        //확장 for문(for in)을 이용해서 차를 한대씩 모두 출력할 것 
+        //document.write("<h2>" + key ....)
+        
+        function Car(brand, color, price, model)
+        {
+            this.brand = brand;
+            this.color = color;
+            this.price = price;
+            this.model = model;
+        }
+
+        const car1 = new Car("benz", "black", "5000", "s-class");
+        const car2 = new Car("genesis", "black", "4000", "g80");
+        const car3 = new Car("hyundai", "white", "2500", "avantte");
+        const car4 = new Car("kia", "grey", "3000", "k5");
+
+        let owners = [car1, car2, car3, car4];
+        for (let c in owners)
+        {
+            document.write("<h2>" + c + "번째 차주<br>"
+                            + "브랜드: " + owners[c].brand + "<br>"
+                            + "색상: " + owners[c].color + "<br>"
+                            + "가격대: " + owners[c].price + "<br>"
+                            + "모델명: " + owners[c].model + "</h2><br>");
+        }
+</body>
+</html>
