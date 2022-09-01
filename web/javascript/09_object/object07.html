@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <script>
+        let corona = {
+            "DESCRIPTION": { "DOBONG": "도봉구 전체", "YANGCHEON": "양천구 전체", "ETCADD": "기타 추가", "SDM": "서대문구 전체", "DONGJAKADD": "동작구 추가", "SDMADD": "서대문구 추가", "SEONGDONG": "성동구 전체", "GANGSEOADD": "강서구 추가", "GANGBUK": "강북구 전체", "GANGSEO": "강서구 전체", "DOBONGADD": "도봉구 추가", "MAPO": "마포구 전체", "GEUMCHEON": "금천구 전체", "YANGCHEONADD": "양천구 추가", "ETC": "기타 전체", "GANGDONGADD": "강동구 추가", "YDPADD": "영등포구 추가", "GEUMCHEONADD": "금천구 추가", "SEOCHOADD": "서추구 추가", "JONGNO": "종로구 전체", "SEOCHO": "서초구 전체", "DDM": "동대문구 전체", "EP": "은평구 전체", "SEONGDONGADD": "성동구 추가", "SONGPAADD": "송파구 추가", "GANGDONG": "강동구 전체", "YONGSAN": "용산구 전체", "GANGNAMADD": "강남구 추가", "GANGNAM": "강남구 전체", "SEONGBUKADD": "성북구 추가", "NOWONADD": "노원구 추가", "SEONGBUK": "성북구 전체", "GWANGJIN": "광진구 전체", "JUNGGUADD": "중구 추가", "GANGBUKADD": "강북구 추가", "JUNGGU": "중구 전체", "JUNGNANGADD": "중랑구 추가", "GWANAKADD": "관악구 추가", "SONGPA": "송파구 전체", "DONGJAK": "동작구 전체", "NOWON": "노원구 전체", "JCG_DT": "자치구 기준일", "YONGSANADD": "용산구 추가", "JONGNOADD": "종로구 추가", "GUROADD": "구로구 추가", "JUNGNANG": "중랑구 전체", "DDMADD": "동대문구 추가", "GWANGJINADD": "광진구 추가", "MAPOADD": "마포구 추가", "GURO": "구로구 전체", "YDP": "영등포구 전체", "GWANAK": "관악구 전체", "EPADD": "은평구 추가" },
+            "DATA": [
+                { "gangbukadd": "422", "etc": "280896", "gangnam": "234434", "songpa": "298380", "gwanakadd": "775", "gangseoadd": "913", "geumcheonadd": "428", "gangdong": "207894", "seongdongadd": "445", "sdm": "138400", "yangcheon": "197840", "gwangjinadd": "510", "seochoadd": "650", "dongjakadd": "659", "mapoadd": "566", "seocho": "181883", "junggu": "55470", "seongdong": "132088", "yongsan": "95368", "ydpadd": "633", "nowonadd": "818", "guro": "183248", "songpaadd": "1015", "dongjak": "179906", "yongsanadd": "319", "gwangjin": "159949", "ddm": "153985", "yangcheonadd": "695", "ydp": "185287", "seongbuk": "194035", "seongbukadd": "603", "ddmadd": "458", "gangbuk": "123424", "gangseo": "257540", "sdmadd": "493", "geumcheon": "104231", "etcadd": "1061", "epadd": "827", "gwanak": "225951", "guroadd": "721", "mapo": "168908", "dobongadd": "483", "dobong": "136794", "jungnangadd": "519", "gangdongadd": "743", "ep": "204740", "jungnang": "167833", "jongno": "61175", "gangnamadd": "782", "jungguadd": "162", "jcg_dt": "2022.08.31.00", "jongnoadd": "211", "nowon": "231295" }
+            ]
+        };
+        console.log(corona);
+        let desc = corona.DESCRIPTION;
+        let data = corona.DATA;
+        console.log(data[0]);
+        const ordered = {};
+        Object.keys(data[0]).sort().forEach(function(key) {
+            ordered[key] = data[0][key];
+        });
+
+        console.log(ordered);
+        for(let key in ordered){
+            document.write(key + " - " + ordered[key] + "<br>");
+        }
+    </script>
+</body>
+
+</html>

@@ -60,7 +60,9 @@
                     if (title == "kind")
                         result += "<p>" + title + "</p>";
                     else
+                    {
                         result += "<ul>";
+                            
                         for (let n in title)
                         {
                             console.log(title[n]);
@@ -68,6 +70,7 @@
                         }
                         
                         result += "</ul>";
+                    }
                 }
             }
         }
