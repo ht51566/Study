@@ -19,6 +19,13 @@ h2 {
     border-radius: 8px;
 }
 
+h3 {
+    background-color: palegreen;
+    padding: 10px;
+    /* color: white; */
+    /* width: 200px; */
+}
+
 span {
     padding: 8px 16px;
     border: 2px inset red;
@@ -34,6 +41,18 @@ div.sky {
     overflow: auto;
     margin: 10px;
     line-height: 100px;
+
+}
+
+div.tomato {
+    /* width: 300px; */
+    height: 100px;
+    color: white;
+    background-color: tomato;
+    font-size: 80px;
+    font-family: fantasy;
+    text-align: center;
+    margin-top: 30px;
 }
 
 ul.tomato li {
@@ -49,11 +68,19 @@ input {
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    padding: 12px 20px 12px 40px;
+    padding: 12px 20px 12px 10px;
 }
 
-button, select {
-    width: 200px;
+input[type=radio], input[type=checkbox]{
+    min-width: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 20px 12px 10px;
+}
+
+select {
+    width: 300px;
     padding: 10px;
     font-size: 20px;
     cursor: pointer;
@@ -69,10 +96,12 @@ button {
     padding: 10px;
     /* width: 97px; */
     margin-top: 10px;
+    cursor: pointer;
 }
 
 button:hover {
-    opacity: 0.7;
+    background-color: #333;
+    color: white;
 }
 
 a {
@@ -86,7 +115,7 @@ table {
     background-image: url(images/susi.gif);
     background-size: cover;
     background-position: 0px 0px; */
-    color: aliceblue
+    /* color: aliceblue */
 }
 
 table,

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+    <style>
+                    
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f1f1f1;
+            padding: 20px;
+            font-family: Arial;
+        }
+
+        /* Center website */
+        .main {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 50px;
+            word-break: break-all;
+        }
+
+        .row {
+            margin: 8px -16px;
+        }
+
+        /* Add padding BETWEEN each column */
+        .row,
+        .row>.column {
+            padding: 8px;
+        }
+
+        /* Create four equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 25%;
+        }
+
+        /* Clear floats after rows */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Content */
+        .content {
+            background-color: white;
+            padding: 10px;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 900px) {
+            .column {
+                width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>동영상 검색</h1>
+    책 제목:
+    <input type="text" name="title" id="title">
+    <button type="button" onclick="searchInfo(3)">검색</button>
+    <div id="row"></div>
+    <script>
+        function searchInfo(page) {
+            let title = document.getElementById("title").value;
+            let url = "https://dapi.kakao.com/v2/search/vclip?target=title&query=" + title+"&page="+`${page?page:1}`;
+
+            let xhttp = new XMLHttpRequest();
+
+            xhttp.onload = function () {
+                //console.log(this);
+                //console.log(this.responseText);
+                process(this.responseText);
+            }
+
+            xhttp.open("get", url);
+            // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.setRequestHeader("Authorization", "KakaoAK f0231e2c36712a45823a35de292938b2");
+            xhttp.send();
+        }
+
+        let row = document.getElementById("row");
+
+        function process(data) {
+            let json_data = JSON.parse(data);
+            let books = json_data.documents;
+            console.log(books);
+            for (let i in books) {
+                let div = document.createElement("div"); 
+                div.setAttribute("class", "column");
+                let div_content = document.createElement("div"); 
+                div_content.setAttribute("class", "content");
+                div.append(div_content);
+                let img = document.createElement("img"); 
+                img.setAttribute("src", books[i].thumbnail);
+                div_content.append(img);
+                let title = document.createElement("h3"); 
+                let preview = document.createElement("a"); 
+                preview.setAttribute("href", books[i].url);
+                preview.innerHTML= books[i].title;
+                title.append(preview);
+                div_content.append(title);
+                let play_time = document.createElement("p"); 
+                play_time.innerHTML = books[i].play_time; 
+                div_content.append(play_time);
+                let datetime = document.createElement("p"); 
+                datetime.innerHTML = books[i].datetime; 
+                div_content.append(datetime);
+                row.append(div);
+            }
+        }
+    </script>
+</body>
+
+</html>
