@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>arrayMethod</title>
 </head>
+
 <body>
     <script>
         //let fruits = new Array(6);
@@ -15,8 +17,8 @@
         console.log(fruits.toString());
         console.log(fruits.toString()[0]);
         let fruits_string = fruits.toString();
-        console.log(typeof(fruits));
-        console.log(typeof(fruits_string));
+        console.log(typeof (fruits));
+        console.log(typeof (fruits_string));
 
         //join: 각 요소를 특정 문자열과 결합하여 하나의 문자열로 만듬
         let fruits_join = fruits.join(" / ");
@@ -33,7 +35,7 @@
         fruits[fruits.length] = "kiwi";
         console.log(fruits);
         //push: array의 끝에 원소 추가하고 array.length 반환
-        console.log(fruits.push("grape","cherry"));
+        console.log(fruits.push("grape", "cherry"));
         console.log(fruits);
 
         //원소 삭제 delete / pop / shift
@@ -42,14 +44,14 @@
         console.log(fruits[0]); //undefined
 
         fruits.pop(); //마지막 원소를 삭제하고 자리도 없앤다
-        console.log(fruits); 
+        console.log(fruits);
 
         let a = fruits.pop(); //마지막 원소를 삭제하고 삭제된 원소를 반환받아 저장
-        console.log(fruits); 
+        console.log(fruits);
         console.log(a);
 
         fruits.shift(); //첫 번째 원소를 삭제
-        console.log(fruits); 
+        console.log(fruits);
 
         //slice: 어레이의 특정 부분을 잘라냄
         fruits.slice(1);
@@ -64,7 +66,7 @@
         //추가될 위치 인덱스, 삭제될 원소 개수, 추가될 원소(array)
         console.log(fruits.splice(2, 1, "lemon", "pear"));
         console.log(fruits);
-        let arr = [1,2,3];
+        let arr = [1, 2, 3];
         console.log(fruits.splice(2, 0, arr));
         console.log(fruits);
 
@@ -79,13 +81,17 @@
         //values : 원소의 값들을 iterator 타입으로 반환
         console.log(fruits.values());
         let val = fruits.values();
-        for(let v of val){
+        for (let v of val) {
             console.log(">>> ", v);
         }
-        
-     
-        
+
+        //array.concat(array) => array
+        const myGirls = ["Cecilie", "Lone"];
+        const myBoys = ["Emil", "Tobias", "Linus"];
+        const myChildren = myGirls.concat(myBoys);
+
 
     </script>
 </body>
+
 </html>

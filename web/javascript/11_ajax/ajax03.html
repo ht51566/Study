@@ -33,9 +33,11 @@
             xhttp.send();
         }
         
-        var xValues = [];
-        var yValues = [];
+        var xValues; 
+        var yValues;
         function processData(data) {
+            xValues = [];
+            yValues = [];
             let json_data = JSON.parse(data);
             console.log(json_data);
             let boxofficeList = json_data.boxOfficeResult.dailyBoxOfficeList;

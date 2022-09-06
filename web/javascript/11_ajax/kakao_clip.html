@@ -103,6 +103,7 @@
         let row = document.getElementById("row");
 
         function process(data) {
+            row.replaceChildren();
             let json_data = JSON.parse(data);
             let books = json_data.documents;
             console.log(books);

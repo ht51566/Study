@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #last{
+            height: 100px; width:200px; padding: 5px;
+            margin-bottom: 20px;
+            background-color: lightseagreen;
+            border: 1px solid #2f044c;
+            overflow: hidden;
+             
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div id="last"></div>
+    <button id="ruler">측정</button>
+
+    <script>
+        $('#ruler').click(function(){
+            //$('#last').css("box-sizing","border-box");
+            let txt = "";
+            txt += "<p>사각형의 넓이는 " + Math.round($('#last').width()) + "<br>";
+            txt += "사각형의 높이는 " + Math.round($('#last').height()) + "</p>";
+            $('#last').html(txt);
+        });
+    </script>
+</body>
+</html>
