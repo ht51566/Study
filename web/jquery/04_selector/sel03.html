@@ -36,16 +36,18 @@
             a.css("background", "yellow").each(function(){
                 txt = $(this).text();
                 console.log(txt);
-                $('.result1').append(txt + " ").css("background", "yellow");
+                $('.result1').append(txt + " ").css("background", "green");
             });
             
-            $('div em').css("background", "skyblue").each(function(){
+            //$('div em').css("background", "skyblue").each(function(){
+            $('div').find("em").css("background", "skyblue").each(function(){
                 txt = $(this).text();
                 console.log(txt);
                 $('.result2').append(txt + " ").css("background", "skyblue");
             });
 
-            $('div > em').css("background", "pink").each(function(){
+            //$('div > em').css("background", "pink").each(function(){
+            $('div').children("em").css("background", "pink").each(function(){
                 txt = $(this).text();
                 console.log(txt);
                 $('.result3').append(txt + " ").css("background", "pink");
