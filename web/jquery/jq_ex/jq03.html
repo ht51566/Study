@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        p {
+            background: yellow;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 5px;
+        }
+    </style>
+    <script src="jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+    <p>Click me!</p>
+    <ul></ul>
+    <script>
+
+        $(function () {
+            // $("p").on("click", function () {
+            //     $('ul').append("<li>Another paragraph!</li>");
+            // });
+            // $("ul").on("click", "li", function () {
+            //     $(this).after("<li>Another paragraph!</li>");
+            // });
+
+            $('body').on('click', 'p', function () {
+                $(this).after('<p>another paragraph!</p>')
+            });
+        });
+    </script>
+</body>
+
+</html>

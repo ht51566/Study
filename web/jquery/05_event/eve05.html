@@ -138,29 +138,33 @@
                 console.log("$(window).height() >>> ", $(window).height());
                 console.log("$(window).scrollTop() >>> ", $(window).scrollTop());
                 if (Math.round(maxHeight/2) <= Math.round(currentScroll)) {
-                    // $.ajax({
-                    //     // Append next contents
-                    //     // ...
-                    // })
-                    loadDoc("ajax.txt");
+                    $.ajax({
+                        url: "ajax.txt",
+                        type: "GET",
+                        success: function(data){
+                            console.log(data);
+                            $('body').append(data);
+                        }
+                    });
+                    // loadDoc("ajax.txt");
                 }
             })
         });
         
-        function loadDoc(url){
-            let xhttp = new XMLHttpRequest();
+        // function loadDoc(url){
+        //     let xhttp = new XMLHttpRequest();
             
-            xhttp.onreadystatechange = function(){
-                console.log(this);-
-                console.log(this.readyState);
-                if(this.readyState == 4 && this.status == 200){
-                    $('body').append(this.responseText);
-                }
-            }
+        //     xhttp.onreadystatechange = function(){
+        //         console.log(this);-
+        //         console.log(this.readyState);
+        //         if(this.readyState == 4 && this.status == 200){
+        //             $('body').append(this.responseText);
+        //         }
+        //     }
 
-            xhttp.open("GET", url);
-            xhttp.send();
-        }
+        //     xhttp.open("GET", url);
+        //     xhttp.send();
+        // }
     </script>
 </body>
 
