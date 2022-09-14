@@ -14,7 +14,7 @@
             padding: 5px;
         }
     </style>
-    <script src="jquery-3.6.1.min.js"></script>
+    <script src="../jq/jquery-3.6.1.min.js"></script>
 </head>
 
 <body>
@@ -23,16 +23,16 @@
     <script>
 
         $(function () {
-            // $("p").on("click", function () {
-            //     $('ul').append("<li>Another paragraph!</li>");
-            // });
-            // $("ul").on("click", "li", function () {
-            //     $(this).after("<li>Another paragraph!</li>");
-            // });
-
-            $('body').on('click', 'p', function () {
-                $(this).after('<p>another paragraph!</p>')
+            $("p").on("click", function () {
+                $('ul').append("<li>Another paragraph!</li>");
             });
+            $("ul").on("click", "li", function () {
+                $(this).after("<li>Another paragraph!</li>");
+            });
+
+            // $('body').on('click', 'p', function () {
+            //     $(this).after('<p>another paragraph!</p>')
+            // });
         });
     </script>
 </body>

@@ -46,13 +46,16 @@
     <div>당신의 별명은 <span id="n_name"></span>이군요~</div>
     <script>
         $(function () {
-            //$('#nick').keydown(function(){
-            $('#nick').keyup(function (e) {
+            $('#nick').keydown(function(){
                 if (e.keyCode == 13) {
                     let nick = $(this).val();
                     $('#n_name').text(nick);
                 }
+            }).change(function (e) {
+                    let nick = $(this).val();
+                    $('#n_name').text(nick);
             });
+
         });
     </script>
     <ul>Form Events
