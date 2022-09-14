@@ -137,7 +137,8 @@
                 console.log("$(document).height() >>> ", maxHeight);
                 console.log("$(window).height() >>> ", $(window).height());
                 console.log("$(window).scrollTop() >>> ", $(window).scrollTop());
-                if (Math.round(maxHeight/2) <= Math.round(currentScroll)) {
+                //if (Math.round(maxHeight/2) <= Math.round(currentScroll)) {
+                if (maxHeight <= Math.round(currentScroll) + 1) {
                     $.ajax({
                         url: "ajax.txt",
                         type: "GET",
