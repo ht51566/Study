@@ -1,8 +1,8 @@
 package ch01_basic;
 
-class Hi {
+class Hi{
 	void print() {
-		System.out.println("I'm the king of JAVA.");
+		System.out.println("I'm the king of JAVA!!!");
 	}
 }
 

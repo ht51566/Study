@@ -31,6 +31,7 @@ public class Dt05_Casting01 {
 		int result2 = intV + (int)douV;
 		int result3 = (int)(intV + douV);
 		
+		
 		char a = 'A';
 		char b = 'A' + 1;
 		System.out.println(a + " - " + b);
