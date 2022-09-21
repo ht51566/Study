@@ -17,6 +17,7 @@ public class If03 {
 	//		
 	//	}
 		
+		
 		if(num == 1) {
             System.out.println("1번이 나왔다.");
         }else if (num == 2) {

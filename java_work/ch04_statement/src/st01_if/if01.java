@@ -1,6 +1,6 @@
 package st01_if;
 
-public class if01 {
+public class If01 {
 	/*
 	//if문: 프로그램의 진행 방향을 바꿔주는 효과
 	

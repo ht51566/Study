@@ -33,7 +33,7 @@ public class If07 {
 			} else if (score % 10 <= 4) {
 				grade += "-";
 			} else {
-				
+				grade += "0";
 			}
 		}
 

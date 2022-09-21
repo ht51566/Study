@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="ch01_basic/src"/>
+	<classpathentry kind="src" path="ch02_variable/src"/>
+	<classpathentry excluding="operator/" kind="src" path="ch03_operator/src"/>
+	<classpathentry kind="src" path="ch03_operator/src/operator"/>
+	<classpathentry kind="src" path="ch04_statement/src"/>
+	<classpathentry excluding="src/" kind="src" path="ch05_array"/>
+	<classpathentry kind="src" path="ch05_array/src"/>
+	<classpathentry kind="output" path="ch01_basic/bin"/>
+</classpath>
