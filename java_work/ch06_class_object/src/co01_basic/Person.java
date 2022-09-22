@@ -1,7 +1,7 @@
 package co01_basic;
 
 // class란? 
-// 객체를 정의해 놓은 것 - 객체 생성의 도구 - 객체 찍어내는 틀
+// 객체를 정의해 놓은 것 - 객체 생성의 도구 - 객체 찍어내는 틀 - 객체들의 공통점을 뽑아놓은 것(추상화)
 // 하나의 data type - 사용자 정의  data type
 // data(객체의 특징-속성-필드)와 함수(객체의 행동-메소드)의 결합 
 // 표의 한 행을 구성하는 데이터 - 객체
@@ -15,6 +15,11 @@ public class Person {
 	String nationality;
 	Car myCar;
 	
+	//생성자: constructor
+//	public Person() {
+//		// TODO Auto-generated constructor stub
+//	}
+	
 	//기능: 메소드
 	void smile() {
 		System.out.println("깔깔깔~~~");
@@ -23,5 +28,7 @@ public class Person {
 	void smile(Person p) {
 		System.out.println(p.name + "이 깔깔깔~~~");
 	}
+	
+	
 		
 }

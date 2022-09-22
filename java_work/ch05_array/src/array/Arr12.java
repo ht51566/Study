@@ -30,8 +30,20 @@ public class Arr12 {
 		//Arrays.sort(lotto);
 		
 		//버블정렬
+		int tmp; boolean change;
+		for(int i = 0; i < lotto.length - 1; i++) {
+			change = false;
+	         for(int j = 0; j < lotto.length - 1 - i; j++) {
+	            if(lotto[j] > lotto[j + 1]) {
+	               tmp = lotto[j];
+	               lotto[j] = lotto[j + 1];
+	               lotto[j + 1] = tmp;
+	               change = true;
+	            }
+	         }
+	         if(!change) break;
+	      }
+	      System.out.println(Arrays.toString(lotto));
 		
-		
-		System.out.println(Arrays.toString(lotto));
 	}
 }
