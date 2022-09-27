@@ -16,5 +16,15 @@ public class AccEx {
 		System.out.println(ac1);
 		System.out.println(ac1.toString());
 		System.out.println(ac2);
+		
+		System.out.println(Account.total);
+		
+		Account ac3 = new Account("333", "jane", 24221);
+		Account ac4 = new Account("333", "jane", 24221);
+		Account ac5 = new Account("333", "jane", 24221);
+		Account ac6 = new Account("333", "jane", 24221);
+		Account ac7 = new Account("333", "jane", 24221);
+		
+		System.out.println(Account.total);
 	}
 }

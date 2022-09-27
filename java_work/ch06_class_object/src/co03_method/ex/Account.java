@@ -1,7 +1,9 @@
 package co03_method.ex;
 
-public class Account {
-
+public class Account{
+	
+	static int total;
+	
 	// field
 	String accNo; // 계좌번호
 	String owner; // 예금주
@@ -12,6 +14,7 @@ public class Account {
 		this.accNo = accNo;
 		this.owner = owner;
 		this.balance = balance;
+		total++;
 	}
 	
 	//method
@@ -19,7 +22,8 @@ public class Account {
 	//예금(deposit) : int money 받아서 잔고 증가: void
 	void deposit(int money) {
 		balance += money;
-		printAccount();
+		//printAccount();
+		System.out.println(this);
 	}
 	
 	//출금(withdraw): int money 받아서 잔고에서 빼주고 return

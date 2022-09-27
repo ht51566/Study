@@ -1,0 +1,130 @@
+package mm;
+
+//일종의 웹서버 백엔드 프로그램 - 프론트엔드에서 넘어오는 요청을 처리
+public class MemberService {
+
+	// 회원정보 저장 및 관리를 위한 DB 역할 - Member 타입 객체를 저장하는 배열
+	private Member[] members = new Member[100];
+	private int index;
+
+	// 객체 싱글톤으로 반환
+	private static MemberService instance;
+
+	
+	private MemberService() {
+		// 객체 생성할 때 회원 다섯 명 만들어서 배열에 저장
+		int i;
+		for (i = 0; i < 5; i++) {
+			members[i] = new Member("ace" + i, "ace" + i, "ace" + i, i * 3);
+		}
+		// 회원이 저장된 인덱스 다음 칸으로 변수 값 초기화
+		index = i;
+	}
+
+	public static MemberService getInstance() {
+		if (instance == null) {
+			instance = new MemberService();
+		}
+		return instance;
+	}
+
+	// 회원가입 메소드
+	public int regist(String id, String password, String name, int age) {
+		// Member 객체 생성 -> 배열의 현재 저장 위치 다음 칸에 저장
+		members[index++] = new Member(id, password, name, age);
+		if (members[index - 1].getId().equals(id)) {
+			return 1;
+		} else {
+			return 0;
+		}
+	}
+
+	// 로그인
+	public Member login(String id, String password) {
+
+		Member member = findMember(id);
+		if (member != null) {
+			if (member.getPassword().equals(password)) {
+				// 비번까지 맞으면 로그인 처리 - 객체의 로그인 속성을 true로 바꿔줌
+				member.setLogin();
+				// 로그인된 회원 객체를 반환하고 메소드 종료
+				return member;
+			} else {
+				// 비번 틀린 경우 - null 반환하고 메소드 종료
+				return null;
+			}
+		} else {
+			// 전체 배열에 id에 해당하는 객체가 없다 - null 반환하고 메소드 종료
+			return null;
+		}
+	}
+	
+	//로그아웃
+	public Member logout(String id) {
+		Member member = findMember(id);
+		if (member != null) {
+			//id에 해당하는 멤버 있음
+			if (member.isLogin()) {
+				// 로그인 했음 - 로그아웃 처리
+				member.setLogin();
+				return member;
+			} else {
+				// 로그인 하지 않은 경우
+				return null;
+			}
+		} else {
+		//회원이 아님
+			return null;
+		}
+	}
+	
+	//회원 목록 조회
+	public Member[] getMembers(String id) {
+		Member member = findMember(id);
+		if (member != null) {
+			//id에 해당하는 멤버 있음
+			if (member.isLogin()) {
+				// 로그인 했음
+				return members;
+			} else {
+				// 로그인 하지 않은 경우
+				return null;
+			}
+		} else {
+			//회원이 아님
+			return null;
+		}
+	}
+	
+	//id 중복 체크
+	public int idCheck(String id) {
+		Member member = findMember(id);
+		if (member == null) {
+		 	 return 0;
+		} else {
+			return 1;
+		}
+	}
+	
+	// id에 해당하는 회원 객체가 있는지 확인해서 있으면 주고 없으면 null주는 메소드 - 여러 메소드에서 활용하므로 공통코드를 메소드로 분리
+	private Member findMember(String id) {
+		for (Member member : members) {
+			// null check - 혹시 null이 나와서 NullpointerException이 발생하는 것을 막기 위함
+			if (member == null) {
+				continue;
+			} else {
+				// 회원 객체가 나왔어 - 그 객체의 id 빼서 매개변수로 받은 id랑 비교
+				if (member.getId().equals(id)) {
+					// id 같은 객체 나왔으면 객체 반환하고 메소드 종료
+					return member;
+				}
+			}
+		}
+		return null;
+	}
+
+
+
+	
+
+}

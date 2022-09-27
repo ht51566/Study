@@ -12,6 +12,7 @@ public class Printer {
 		
 		//static method 실행 - Class명.method명
 		Printer.println("wow");
+		//Printer.println(false);
 		
 	}
 

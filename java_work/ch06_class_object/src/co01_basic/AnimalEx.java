@@ -1,6 +1,8 @@
 package co01_basic;
 
-public class AnimalEx {
+import co07_access_modifier.pack1.A;
+
+public class AnimalEx extends A{
 	public static void main(String[] args) {
 		
 		Animal ani1 = new Animal();
@@ -30,5 +32,6 @@ public class AnimalEx {
 			}
 			
 		}
+		
 	}
 }
