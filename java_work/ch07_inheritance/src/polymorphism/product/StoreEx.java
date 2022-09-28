@@ -11,5 +11,7 @@ public class StoreEx {
 		ct.purchaseList();
 		ct.refund(tv1);
 		ct.purchaseList();
+		ct.buy(new Notebook());
+		ct.purchaseList();
 	}
 }

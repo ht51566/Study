@@ -31,3 +31,14 @@ class Computer extends Product{
 		return "Computer";
 	}
 }
+
+class Notebook extends Product{
+	public Notebook() {
+		super(500);
+	}
+	
+	@Override
+	public String toString() {
+		return "Notebook";
+	}
+}
