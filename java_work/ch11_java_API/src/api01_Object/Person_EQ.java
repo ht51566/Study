@@ -92,6 +92,5 @@ public class Person_EQ {
 		System.out.println(ani1.equals(ani4));
 		
 		System.out.println(ani1.hashCode());
-		
 	}
 }
