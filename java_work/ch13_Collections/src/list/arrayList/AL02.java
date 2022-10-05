@@ -15,7 +15,7 @@ public class AL02 {
 		intList.add(new Integer(0));
 		intList.add(new Integer(1));
 
-		// subList(): 리스트의 특정 인데스 범위를 리스트로 반환
+		// subList(): 리스트의 특정 인덱스 범위를 리스트로 반환
 		List<Integer> intList2 = new ArrayList<>(intList.subList(1, 4));
 		print("subList()", intList, intList2);
 
